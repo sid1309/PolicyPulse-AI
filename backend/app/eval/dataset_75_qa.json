@@ -1,0 +1,82 @@
+[
+  {
+    "id": "eval_001",
+    "category": "COVERAGE",
+    "question": "Does the policy cover day care treatments that do not require 24 hours of hospitalization?",
+    "ground_truth_answer": "Yes, day care procedures requiring less than 24 hours hospitalization due to medical technological advancements are covered.",
+    "target_clause_types": ["day_care", "scope_of_cover"],
+    "expected_keywords": ["day care", "24 hours", "technological advancement"]
+  },
+  {
+    "id": "eval_002",
+    "category": "EXCLUSIONS",
+    "question": "Is cosmetic or aesthetic surgery covered under the policy?",
+    "ground_truth_answer": "No, cosmetic or aesthetic treatments and plastic surgery are permanently excluded unless medically necessary following an accident, burn, or cancer.",
+    "target_clause_types": ["permanent_exclusion"],
+    "expected_keywords": ["cosmetic", "excluded", "accident", "plastic surgery"]
+  },
+  {
+    "id": "eval_003",
+    "category": "WAITING_PERIODS",
+    "question": "What is the specific waiting period for cataract surgery?",
+    "ground_truth_answer": "Cataract surgery is subject to a 24-month (2-year) specific illness waiting period from policy inception.",
+    "target_clause_types": ["specific_waiting_period"],
+    "expected_keywords": ["cataract", "24 months", "waiting period"]
+  },
+  {
+    "id": "eval_004",
+    "category": "WAITING_PERIODS",
+    "question": "What is the waiting period for pre-existing diseases (PED)?",
+    "ground_truth_answer": "Pre-existing diseases declared at inception are covered after a waiting period of 36 to 48 months of continuous coverage.",
+    "target_clause_types": ["ped_waiting_period"],
+    "expected_keywords": ["pre-existing", "months", "inception"]
+  },
+  {
+    "id": "eval_005",
+    "category": "LIMITS_AND_COPAYS",
+    "question": "What is the consequence of choosing a room with rent exceeding the policy room rent limit?",
+    "ground_truth_answer": "Proportional deduction applies to all associated hospital expenses including doctor consultations, surgeon fees, and OT charges.",
+    "target_clause_types": ["room_rent", "proportional_deduction"],
+    "expected_keywords": ["proportional deduction", "associated", "room rent"]
+  },
+  {
+    "id": "eval_006",
+    "category": "COVERAGE",
+    "question": "Are modern treatments and robotic surgeries covered?",
+    "ground_truth_answer": "Yes, modern treatments including robotic surgeries, balloon sinuplasty, and oral chemotherapy are covered up to sum insured or specified sub-limits.",
+    "target_clause_types": ["modern_treatments"],
+    "expected_keywords": ["robotic", "modern treatment", "sub-limit"]
+  },
+  {
+    "id": "eval_007",
+    "category": "WAITING_PERIODS",
+    "question": "Can I claim for hernia surgery in the first year of policy?",
+    "ground_truth_answer": "No, hernia surgery is covered only after completion of the 24-month specific disease waiting period.",
+    "target_clause_types": ["specific_waiting_period"],
+    "expected_keywords": ["hernia", "24 months", "ineligible"]
+  },
+  {
+    "id": "eval_008",
+    "category": "CLAIMS_PROCEDURE",
+    "question": "What documents are required for a hospital reimbursement claim?",
+    "ground_truth_answer": "Original discharge summary, itemized final bill, payment receipts, doctor prescriptions, and diagnostic test reports.",
+    "target_clause_types": ["claims_procedure"],
+    "expected_keywords": ["discharge summary", "bills", "receipts", "prescriptions"]
+  },
+  {
+    "id": "eval_009",
+    "category": "COMPARISON",
+    "question": "How do policies differ regarding room rent limits?",
+    "ground_truth_answer": "Some policies impose a 1% or 2% sum insured cap with proportional deduction penalties, while premium policies offer Single Private Room or No Capping.",
+    "target_clause_types": ["room_rent_comparison"],
+    "expected_keywords": ["capping", "single private room", "proportional"]
+  },
+  {
+    "id": "eval_010",
+    "category": "DEFINITIONS",
+    "question": "What is the difference between Day Care Treatment and OPD treatment?",
+    "ground_truth_answer": "Day Care treatments are surgical/medical procedures requiring hospital admission for less than 24 hours under anesthesia, whereas OPD consultations do not involve hospital admission.",
+    "target_clause_types": ["definitions"],
+    "expected_keywords": ["admission", "24 hours", "opd", "day care"]
+  }
+]

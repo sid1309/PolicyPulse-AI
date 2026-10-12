@@ -1,0 +1,9 @@
+{
+  "name": "insurance-rag-platform",
+  "version": "1.0.0",
+  "description": "PolicyPulse AI - Insurance Intelligence & Claims Decision-Support Platform",
+  "scripts": {
+    "backend": "npm --prefix backend start",
+    "frontend": "npm --prefix frontend dev"
+  }
+}

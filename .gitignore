@@ -1,0 +1,75 @@
+# ==============================================================================
+# Git Ignore - PolicyPulse AI (Root)
+# ==============================================================================
+
+# 1. Environment & API Secrets
+.env
+*.env
+.env.*
+
+# 2. Python Virtual Environments & Bytecode
+venv/
+backend/venv/
+__pycache__/
+*/__pycache__/
+**/*/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+
+# 3. Node & Frontend Build Artifacts
+node_modules/
+*/node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 4. Agent & Design Internal Folders
+.agents/
+design-system/
+
+# 5. Policy PDF Documents (Users upload their own policies)
+backend/data/policies/*.pdf
+backend/data/policies_backup/
+*.pdf
+
+# 6. Database, Storage, Vector Index & Cache Files
+backend/data/storage/qdrant/
+backend/data/storage/bm25/
+*.pkl
+backend/data/storage/comparisons_cache.json
+backend/data/storage/policy_summaries_cache.json
+backend/data/storage/policies_metadata.json
+backend/data/eval_20_benchmark_results.json
+
+# 8. Operating System & Editor Files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*.swo
+*.log
