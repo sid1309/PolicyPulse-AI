@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: policypulse-backend
+    runtime: python
+    plan: free
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: python -m backend.app.main
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: PYTHONPATH
+        value: .
+      - key: DEFAULT_LLM_PROVIDER
+        value: groq
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GROG_API_KEY_1
+        sync: false
+      - key: GROG_API_KEY_2
+        sync: false

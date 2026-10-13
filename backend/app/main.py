@@ -20,10 +20,11 @@ app = FastAPI(
     lifespan=lifespan
 )
 
-# Enable CORS for React frontend
+# Enable CORS for React frontend (supports localhost & Vercel deployments)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
+    allow_origin_regex=r"^https?:\/\/.*",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -58,3 +59,8 @@ def health_check():
         "neo4j_enabled": settings.NEO4J_ENABLED,
         "default_llm": settings.DEFAULT_LLM_PROVIDER
     }
+
+if __name__ == "__main__":
+    import uvicorn
+    port = int(os.environ.get("PORT", 10000))
+    uvicorn.run("backend.app.main:app", host="0.0.0.0", port=port)

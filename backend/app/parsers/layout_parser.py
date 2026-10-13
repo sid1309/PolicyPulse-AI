@@ -1,5 +1,5 @@
 import re
-import fitz  # PyMuPDF
+import pymupdf as fitz  # PyMuPDF modern import
 from typing import List, Dict, Any, Optional, Tuple
 from pathlib import Path
 

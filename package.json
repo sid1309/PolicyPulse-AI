@@ -4,6 +4,7 @@
   "description": "PolicyPulse AI - Insurance Intelligence & Claims Decision-Support Platform",
   "scripts": {
     "backend": "npm --prefix backend start",
-    "frontend": "npm --prefix frontend dev"
+    "frontend": "npm --prefix frontend dev",
+    "build": "npm --prefix frontend run build"
   }
 }

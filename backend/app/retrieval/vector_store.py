@@ -36,8 +36,14 @@ class VectorStoreManager:
                     VectorStoreManager._shared_client = self.client
             
         self.embedding_dimension = 384  # Default for BAAI/bge-small-en-v1.5 / all-MiniLM-L6-v2
-        self._init_embedder()
+        self.embedder = VectorStoreManager._shared_embedder
+        self.embed_type = VectorStoreManager._shared_embed_type
         self._ensure_collection()
+
+    def _ensure_embedder(self):
+        """Lazy initialization of embedder to guarantee sub-second server startup."""
+        if self.embedder is None:
+            self._init_embedder()
 
     def _init_embedder(self):
         """Initializes embedder with fastembed for speed and zero GPU requirement, with fallback."""
@@ -67,6 +73,7 @@ class VectorStoreManager:
 
     def _get_embedding(self, text: str) -> List[float]:
         """Generates dense vector for a single text."""
+        self._ensure_embedder()
         if self.embed_type == "fastembed":
             vectors = list(self.embedder.embed([text]))
             return vectors[0].tolist()
@@ -83,6 +90,7 @@ class VectorStoreManager:
 
     def _get_embeddings_batch(self, texts: List[str]) -> List[List[float]]:
         """Batch embedding generation."""
+        self._ensure_embedder()
         if self.embed_type == "fastembed":
             vectors = list(self.embedder.embed(texts))
             return [v.tolist() for v in vectors]

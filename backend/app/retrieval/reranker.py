@@ -10,7 +10,13 @@ class CrossEncoderReranker:
 
     def __init__(self):
         self.model = None
-        self._init_model()
+        self._initialized = False
+
+    def _ensure_model(self):
+        """Lazy load CrossEncoder to guarantee instant server boot."""
+        if not self._initialized:
+            self._init_model()
+            self._initialized = True
 
     def _init_model(self):
         """Attempts to load fast cross-encoder, with graceful fallback."""
@@ -32,6 +38,7 @@ class CrossEncoderReranker:
         """Reranks candidate chunks for high legal relevance."""
         if not candidates:
             return []
+        self._ensure_model()
             
         q_lower = query.lower()
         coverage_query = any(w in q_lower for w in [
