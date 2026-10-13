@@ -93,6 +93,7 @@ async def upload_policy(
         shutil.copyfileobj(file.file, buffer)
         
     # Process and chunk
+    import gc
     chunks = chunker.chunk_policy(
         file_path=str(dest_path),
         policy_id=policy_id,
@@ -100,6 +101,7 @@ async def upload_policy(
         plan_name=plan_name,
         version=version
     )
+    gc.collect()
     
     if not chunks:
         raise HTTPException(status_code=422, detail="Failed to extract readable clauses from PDF.")
@@ -107,6 +109,7 @@ async def upload_policy(
     # Multi-index storage
     retriever.vector_store.upsert_chunks(chunks)
     retriever.bm25.add_chunks(chunks)
+    gc.collect()
     
     # Ingest relations to graph
     for c in chunks:

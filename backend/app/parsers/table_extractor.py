@@ -55,11 +55,19 @@ class TableExtractor:
 
     def extract_tables_from_pdf(self, file_path: str) -> List[Dict[str, Any]]:
         extracted_tables = []
+        import gc
         try:
             with pdfplumber.open(file_path) as pdf:
-                for page_idx, page in enumerate(pdf.pages):
+                # Cap table extraction to 35 key pages to guarantee Render 512MB RAM compliance
+                total_pages = len(pdf.pages)
+                pages_to_check = pdf.pages[:35] if total_pages > 35 else pdf.pages
+
+                for page_idx, page in enumerate(pages_to_check):
                     page_num = page_idx + 1
-                    tables = page.extract_tables()
+                    try:
+                        tables = page.extract_tables()
+                    except Exception:
+                        tables = []
                     
                     for t_idx, table in enumerate(tables):
                         if not table or len(table) < 2:
@@ -97,9 +105,17 @@ class TableExtractor:
                             "row_count": len(rows),
                             "col_count": len(headers)
                         })
+                    
+                    # Flush page layout cache immediately to release memory
+                    try:
+                        page.flush_cache()
+                    except Exception:
+                        pass
         except Exception as e:
             # Fallback gracefully if pdfplumber encounters non-standard font encoding
             print(f"Notice: Table extraction encountered issue: {e}")
+        finally:
+            gc.collect()
             
         return extracted_tables
 

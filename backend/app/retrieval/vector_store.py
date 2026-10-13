@@ -55,7 +55,8 @@ class VectorStoreManager:
 
         try:
             from fastembed import TextEmbedding
-            self.embedder = TextEmbedding(model_name="BAAI/bge-small-en-v1.5")
+            # Restrict ONNX to 1 thread to cap memory under 150MB on Render Free tier
+            self.embedder = TextEmbedding(model_name="BAAI/bge-small-en-v1.5", threads=1)
             self.embedding_dimension = 384
             self.embed_type = "fastembed"
         except Exception:
@@ -111,42 +112,45 @@ class VectorStoreManager:
             )
 
     def upsert_chunks(self, chunks: List[ClauseChunk]) -> int:
-        """Stores clause chunks into Qdrant collection with rich metadata payload."""
+        """Stores clause chunks into Qdrant collection with micro-batching for low RAM footprint."""
         if not chunks:
             return 0
             
-        texts = [c.content_text for c in chunks]
-        vectors = self._get_embeddings_batch(texts)
-        
-        points = []
-        for idx, chunk in enumerate(chunks):
-            # Create integer or UUID point ID
-            point_id = chunk.chunk_id
-            payload = {
-                "chunk_id": chunk.chunk_id,
-                "policy_id": chunk.policy_id,
-                "insurer": chunk.insurer,
-                "plan_name": chunk.plan_name,
-                "version": chunk.version,
-                "section_name": chunk.section_name,
-                "clause_id": chunk.clause_id,
-                "clause_title": chunk.clause_title,
-                "page_number": chunk.page_number,
-                "page_range": chunk.page_range,
-                "chunk_type": chunk.chunk_type,
-                "content_text": chunk.content_text,
-                "bbox": chunk.bbox,
-                "entities": chunk.entities
-            }
-            points.append(PointStruct(id=point_id, vector=vectors[idx], payload=payload))
+        import gc
+        # Micro-batching in blocks of 16 chunks to keep memory usage under 200MB on Render Free tier
+        batch_size = 16
+        for i in range(0, len(chunks), batch_size):
+            chunk_batch = chunks[i:i + batch_size]
+            texts = [c.content_text for c in chunk_batch]
+            vectors = self._get_embeddings_batch(texts)
             
-        # Upload points in batches of 100
-        batch_size = 100
-        for i in range(0, len(points), batch_size):
+            points = []
+            for idx, chunk in enumerate(chunk_batch):
+                point_id = chunk.chunk_id
+                payload = {
+                    "chunk_id": chunk.chunk_id,
+                    "policy_id": chunk.policy_id,
+                    "insurer": chunk.insurer,
+                    "plan_name": chunk.plan_name,
+                    "version": chunk.version,
+                    "section_name": chunk.section_name,
+                    "clause_id": chunk.clause_id,
+                    "clause_title": chunk.clause_title,
+                    "page_number": chunk.page_number,
+                    "page_range": chunk.page_range,
+                    "chunk_type": chunk.chunk_type,
+                    "content_text": chunk.content_text,
+                    "bbox": chunk.bbox,
+                    "entities": chunk.entities
+                }
+                points.append(PointStruct(id=point_id, vector=vectors[idx], payload=payload))
+                
             self.client.upsert(
                 collection_name=self.COLLECTION_NAME,
-                points=points[i:i + batch_size]
+                points=points
             )
+            del points, vectors, texts
+            gc.collect()
             
         return len(chunks)
 
