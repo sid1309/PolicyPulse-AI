@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { apiUrl } from '../apiConfig'
 import { LineChart, CheckCircle2, AlertCircle, Play, Sparkles, Clock, Target, Award, BookCheck, ShieldCheck, Zap } from 'lucide-react'
 
 export default function EvalDashboard() {
@@ -10,7 +11,7 @@ export default function EvalDashboard() {
     setLoading(true)
     setError('')
     try {
-      const res = await fetch('/api/eval/benchmark')
+      const res = await fetch(apiUrl('/api/eval/benchmark'))
       if (!res.ok) {
         throw new Error('Benchmark execution failed')
       }

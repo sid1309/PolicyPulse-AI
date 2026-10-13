@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { apiUrl } from '../apiConfig'
 import {
   UploadCloud, FileText, Trash2, ExternalLink, Sparkles,
   Shield, Database, FileCheck, Star, StarOff, AlertTriangle,
@@ -50,7 +51,7 @@ export default function PolicyManager({ policies, activePolicyId, onSetActivePol
     formData.append('version', version.trim() || '2024')
 
     try {
-      const res = await fetch('/api/policies/upload', { method: 'POST', body: formData })
+      const res = await fetch(apiUrl('/api/policies/upload'), { method: 'POST', body: formData })
       if (!res.ok) {
         const err = await res.json()
         throw new Error(err.detail || 'Upload failed')
@@ -79,7 +80,7 @@ export default function PolicyManager({ policies, activePolicyId, onSetActivePol
   const handleDelete = async (policyId) => {
     if (!window.confirm(`Delete this policy? This cannot be undone.`)) return
     try {
-      await fetch(`/api/policies/${policyId}`, { method: 'DELETE' })
+      await fetch(apiUrl(`/api/policies/${policyId}`), { method: 'DELETE' })
       // If we deleted the active policy, clear it
       if (policyId === activePolicyId) onSetActivePolicy(null)
       onRefresh()

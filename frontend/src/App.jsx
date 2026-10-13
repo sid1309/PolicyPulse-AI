@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { apiUrl } from './apiConfig'
 import Navbar from './components/Navbar'
 import ChatAssistant from './components/ChatAssistant'
 import ComparisonMatrix from './components/ComparisonMatrix'
@@ -36,7 +37,7 @@ export default function App() {
 
   const fetchPolicies = async () => {
     try {
-      const res = await fetch('/api/policies')
+      const res = await fetch(apiUrl('/api/policies'))
       if (res.ok) {
         const data = await res.json()
         setPolicies(data)

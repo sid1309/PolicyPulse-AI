@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { apiUrl } from '../apiConfig'
 import {
   Calculator, CheckCircle2, AlertTriangle, XCircle, FileText,
   IndianRupee, Sparkles, ChevronRight, ChevronLeft, Check,
@@ -99,7 +100,7 @@ export default function ClaimsCalculator({ policies, activePolicyId, onOpenPdf }
     setLoading(true)
     setCheckedDocs({})
     try {
-      const res = await fetch('/api/claims/assess', {
+      const res = await fetch(apiUrl('/api/claims/assess'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

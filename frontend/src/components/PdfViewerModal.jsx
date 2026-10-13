@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { apiUrl } from '../apiConfig'
 import {
   X, ExternalLink, FileText, CheckCircle2, ChevronLeft, ChevronRight,
   Maximize2, Minimize2, Copy, Check, ShieldCheck, Columns, Square
@@ -21,7 +22,7 @@ export default function PdfViewerModal({
 
   if (!policyId) return null
 
-  const pdfUrl = `/api/policies/pdf/${policyId}#page=${currentPage}`
+  const pdfUrl = apiUrl(`/api/policies/pdf/${policyId}#page=${currentPage}`)
 
   const handleCopy = () => {
     const text = clauseExcerpt || `Policy: ${policyId}, Page: ${currentPage}`

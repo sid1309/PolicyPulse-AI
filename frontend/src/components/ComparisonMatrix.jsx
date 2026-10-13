@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { apiUrl } from '../apiConfig'
 import {
   Scale, Check, AlertCircle, Sparkles, Award, Layers,
   FileDiff, ArrowRight, PlusCircle, MinusCircle, Info, History
@@ -43,7 +44,7 @@ function ComparisonView({ policies, onOpenPdf }) {
     setError('')
     setLoading(true)
     try {
-      const res = await fetch('/api/compare', {
+      const res = await fetch(apiUrl('/api/compare'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ policy_ids: selectedPolicies }),
@@ -236,7 +237,7 @@ function DiffView({ policies, onOpenPdf }) {
     setError('')
     setLoading(true)
     try {
-      const res = await fetch('/api/compare/diff', {
+      const res = await fetch(apiUrl('/api/compare/diff'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ old_policy_id: oldPolicyId, new_policy_id: newPolicyId })

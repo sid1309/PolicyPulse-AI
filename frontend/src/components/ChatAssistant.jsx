@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
+import { apiUrl } from '../apiConfig'
 import {
   Send, Sparkles, CheckCircle2, AlertTriangle, XCircle, HelpCircle,
   BookOpen, Layers, ShieldCheck, Zap, Check, Info, ChevronRight,
@@ -18,7 +19,7 @@ function ClauseExplainer({ clauseTitle, clauseText, verdict, insurer }) {
       setLoading(true)
       setError(null)
       try {
-        const res = await fetch('/api/chat/explain', {
+        const res = await fetch(apiUrl('/api/chat/explain'), {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -735,7 +736,7 @@ export default function ChatAssistant({
           content: m.text
         }))
 
-      const res = await fetch('/api/chat', {
+      const res = await fetch(apiUrl('/api/chat'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

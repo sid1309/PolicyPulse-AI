@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { apiUrl } from '../apiConfig'
 import {
   Sparkles, Scale, Calculator, FolderOpen, Info,
   CheckCircle2, X, Zap, Cpu, Key, HelpCircle
@@ -44,7 +45,7 @@ export default function Navbar({ activeTab, setActiveTab, policyCount, activePol
   const [showEngineModal, setShowEngineModal] = useState(false)
 
   useEffect(() => {
-    fetch('/api/health')
+    fetch(apiUrl('/api/health'))
       .then(res => res.json())
       .then(data => setEngineInfo(data))
       .catch(() => {})

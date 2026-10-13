@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { apiUrl } from '../apiConfig'
 import {
   Shield, CheckCircle2, AlertTriangle, X, FileText, ExternalLink,
   Sparkles, Calendar, Building2, Wallet, Stethoscope, ChevronRight,
@@ -15,7 +16,7 @@ export default function PolicySummaryModal({ policyId, onClose, onOpenPdf }) {
     if (!policyId) return
     setLoading(true)
     setError(null)
-    fetch(`/api/policies/${policyId}/summary`)
+    fetch(apiUrl(`/api/policies/${policyId}/summary`))
       .then(res => {
         if (!res.ok) throw new Error('Failed to load policy summary')
         return res.json()

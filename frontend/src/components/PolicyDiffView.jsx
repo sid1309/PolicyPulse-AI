@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { apiUrl } from '../apiConfig'
 import { FileDiff, ArrowRight, PlusCircle, MinusCircle, Info, Sparkles, AlertCircle, History, ShieldAlert } from 'lucide-react'
 
 export default function PolicyDiffView({ policies, onOpenPdf }) {
@@ -21,7 +22,7 @@ export default function PolicyDiffView({ policies, onOpenPdf }) {
     setLoading(true)
 
     try {
-      const res = await fetch('/api/compare/diff', {
+      const res = await fetch(apiUrl('/api/compare/diff'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
