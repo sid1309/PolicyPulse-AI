@@ -1,0 +1,194 @@
+{
+  "HDFC_ERGO_OPTIMA_SECURE_2024.1": {
+    "policy_id": "HDFC_ERGO_OPTIMA_SECURE_2024.1",
+    "fingerprint": {
+      "filename": "hdfc.pdf",
+      "created_at": "2026-10-11T15:09:23.967896",
+      "chunk_count": 325
+    },
+    "summary": {
+      "policy_id": "HDFC_ERGO_OPTIMA_SECURE_2024.1",
+      "insurer": "HDFC ERGO",
+      "plan_name": "Optima Secure",
+      "version": "2024.1",
+      "total_pages": 31,
+      "sum_insured": "\u20b95 Lakhs \u2013 \u20b92 Crore",
+      "room_rent_cap": "1% of Sum Insured / Day (ICU: 2% / Day)",
+      "icu_limit": "No Sub-limit / Actuals",
+      "ped_waiting_period": "36 Months",
+      "specific_illness_waiting": "24 Months",
+      "initial_waiting_period": "30 Days (Accident exempt)",
+      "pre_post_hospitalization": "60 Days Pre / 180 Days Post Hospitalization",
+      "copay": "0% (Nil Co-payment)",
+      "restoration_benefit": "100% Instant Recharge on exhaustion",
+      "day_care": "All 540+ Day Care procedures covered",
+      "key_exclusions": [
+        "Cosmetic, aesthetic or obesity surgeries (unless reconstructive post-trauma)",
+        "Dental treatments and tooth extractions (unless hospitalization is medically indicated)",
+        "Unproven, experimental treatments and stem-cell therapies",
+        "Self-inflicted injuries and treatments resulting from hazardous extreme sports",
+        "Rest cure, general weakness and non-prescribed diagnostic admission"
+      ],
+      "plain_english_summary": "HDFC ERGO Optima Secure provides comprehensive in-patient cover with 1% of Sum Insured / Day (ICU: 2% / Day). Pre-existing illnesses require 36 Months continuous tenure, and specified surgeries (cataract, hernia) require 24 Months. Mandatory co-payment is 0% (Nil Co-payment).",
+      "citations": [
+        {
+          "policy_id": "HDFC_ERGO_OPTIMA_SECURE_2024.1",
+          "insurer": "HDFC ERGO",
+          "plan_name": "Optima Secure",
+          "section_name": "11. Table of Benefits",
+          "clause_id": "1. Room Rent, Boarding, Nursing Expenses",
+          "clause_title": "1. Room Rent, Boarding, Nursing Expenses al",
+          "page_number": 25,
+          "excerpt": "[HDFC ERGO - Optima Secure] > [11. Table of Benefits] > [1. Room Rent, Boarding, Nursing Expenses al]:\n1. Room Rent, Boarding, Nursing Expenses all-inclusive as provided by the Hos...",
+          "bbox": null,
+          "relevance_score": null
+        },
+        {
+          "policy_id": "HDFC_ERGO_OPTIMA_SECURE_2024.1",
+          "insurer": "HDFC ERGO",
+          "plan_name": "Optima Secure",
+          "section_name": "11. Table of Benefits",
+          "clause_id": "11. Table of Benefits",
+          "clause_title": "11. Table of Benefits",
+          "page_number": 25,
+          "excerpt": "[HDFC ERGO - Optima Secure] > [11. Table of Benefits] > [11. Table of Benefits]:\nPED waiting period 36 months ( For pre existing diseases other than the pre-existing Disability and...",
+          "bbox": null,
+          "relevance_score": null
+        },
+        {
+          "policy_id": "HDFC_ERGO_OPTIMA_SECURE_2024.1",
+          "insurer": "HDFC ERGO",
+          "plan_name": "Optima Secure",
+          "section_name": "4.6 Cataract Treatment",
+          "clause_id": "4.7 Modern Treatment: (c))",
+          "clause_title": "4.7 Modern Treatment: (c))",
+          "page_number": 12,
+          "excerpt": "[HDFC ERGO - Optima Secure] > [4.6 Cataract Treatment] > [4.7 Modern Treatment: (c))]:\nc) The within referred waiting period is made applicable to the enhanced sum insured in the e...",
+          "bbox": null,
+          "relevance_score": null
+        },
+        {
+          "policy_id": "HDFC_ERGO_OPTIMA_SECURE_2024.1",
+          "insurer": "HDFC ERGO",
+          "plan_name": "Optima Secure",
+          "section_name": "3.1 Standard Definitions",
+          "clause_id": "Def 10. Co-payment means a cost sharing ",
+          "clause_title": "Def 10. Co-payment means a cost sharing requirem",
+          "page_number": 3,
+          "excerpt": "[HDFC ERGO - Optima Secure] > [3.1 Standard Definitions] > [Def 10. Co-payment means a cost sharing requirem]:\nDef 10. Co-payment means a cost sharing requirement under a health in...",
+          "bbox": null,
+          "relevance_score": null
+        },
+        {
+          "policy_id": "HDFC_ERGO_OPTIMA_SECURE_2024.1",
+          "insurer": "HDFC ERGO",
+          "plan_name": "Optima Secure",
+          "section_name": "4.2 AYUSH Treatment",
+          "clause_id": "4. 4 Post-Hospitalization Medical Expens",
+          "clause_title": "4. 4 Post-Hospitalization Medical Expenses",
+          "page_number": 10,
+          "excerpt": "[HDFC ERGO - Optima Secure] > [4.2 AYUSH Treatment] > [4. 4 Post-Hospitalization Medical Expenses]:\n4.4 Post-Hospitalization Medical Expenses : The Company shall indemnify Post Hos...",
+          "bbox": null,
+          "relevance_score": null
+        }
+      ]
+    },
+    "cached_at": "2026-10-13T18:10:04.995410"
+  },
+  "BAJAJ_COMPLETE_2025.1": {
+    "policy_id": "BAJAJ_COMPLETE_2025.1",
+    "fingerprint": {
+      "filename": "bajaj health policy.pdf",
+      "created_at": "2026-10-13T19:49:07.032120",
+      "chunk_count": 339
+    },
+    "summary": {
+      "policy_id": "BAJAJ_COMPLETE_2025.1",
+      "insurer": "Bajaj",
+      "plan_name": "complete",
+      "version": "2025.1",
+      "total_pages": 58,
+      "sum_insured": "\u20b95 Lakhs \u2013 \u20b92 Crore",
+      "room_rent_cap": "Single Private Room",
+      "icu_limit": "No Sub-limit / Actuals",
+      "ped_waiting_period": "36 Months",
+      "specific_illness_waiting": "24 Months",
+      "initial_waiting_period": "30 Days (Accident exempt)",
+      "pre_post_hospitalization": "60 Days Pre / 180 Days Post Hospitalization",
+      "copay": "20% Co-payment (Zone / Age Based)",
+      "restoration_benefit": "100% Instant Recharge on exhaustion",
+      "day_care": "All 540+ Day Care procedures covered",
+      "key_exclusions": [
+        "Cosmetic, aesthetic or obesity surgeries (unless reconstructive post-trauma)",
+        "Dental treatments and tooth extractions (unless hospitalization is medically indicated)",
+        "Unproven, experimental treatments and stem-cell therapies",
+        "Self-inflicted injuries and treatments resulting from hazardous extreme sports",
+        "Rest cure, general weakness and non-prescribed diagnostic admission"
+      ],
+      "plain_english_summary": "Bajaj complete provides comprehensive in-patient cover with Single Private Room. Pre-existing illnesses require 36 Months continuous tenure, and specified surgeries (cataract, hernia) require 24 Months. Mandatory co-payment is 20% Co-payment (Zone / Age Based).",
+      "citations": [
+        {
+          "policy_id": "BAJAJ_COMPLETE_2025.1",
+          "insurer": "Bajaj",
+          "plan_name": "complete",
+          "section_name": "Scope of cover: The Company hereby agrees to indemnify You in respect of Reasonable and Customary expenses in an admissible claim, for any or all of the following covers as opted, subject to the Sum Insured (\u201cSI\u201d), Limits, Deductibles, Co- payment, Terms, Conditions, Definitions and Exclusions contained or otherwise expressed in this Policy.",
+          "clause_id": "i. Room and Boarding expenses as per the",
+          "clause_title": "i. Room and Boarding expenses as per the li",
+          "page_number": 20,
+          "excerpt": "[Bajaj - complete] > [Scope of cover: The Company hereby agrees to indemnify You in respect of Reasonable and Customary expenses in an admissible claim, for any or all of the follo...",
+          "bbox": null,
+          "relevance_score": null
+        },
+        {
+          "policy_id": "BAJAJ_COMPLETE_2025.1",
+          "insurer": "Bajaj",
+          "plan_name": "complete",
+          "section_name": "Waiting Periods & Exclusions",
+          "clause_id": "Pre-Existing Diseases (Code- Excl01)",
+          "clause_title": "Pre-Existing Diseases (Code- Excl01)",
+          "page_number": 27,
+          "excerpt": "[Bajaj - complete] > [Waiting Periods & Exclusions] > [Pre-Existing Diseases (Code- Excl01)]:\nexcluded until the expiry of 36 months/specified number of months of continuous covera...",
+          "bbox": null,
+          "relevance_score": null
+        },
+        {
+          "policy_id": "BAJAJ_COMPLETE_2025.1",
+          "insurer": "Bajaj",
+          "plan_name": "complete",
+          "section_name": "Waiting Periods & Exclusions",
+          "clause_id": "Specified Disease/Procedure Waiting Peri",
+          "clause_title": "Specified Disease/Procedure Waiting Period (Code- Excl02)",
+          "page_number": 27,
+          "excerpt": "[Bajaj - complete] > [Waiting Periods & Exclusions] > [Specified Disease/Procedure Waiting Period (Code- Excl02)]:\nnorms on Portability stipulated by IRDAI, then waiting period for...",
+          "bbox": null,
+          "relevance_score": null
+        },
+        {
+          "policy_id": "BAJAJ_COMPLETE_2025.1",
+          "insurer": "Bajaj",
+          "plan_name": "complete",
+          "section_name": "Scope of cover: The Company hereby agrees to indemnify You in respect of Reasonable and Customary expenses in an admissible claim, for any or all of the following covers as opted, subject to the Sum Insured (\u201cSI\u201d), Limits, Deductibles, Co- payment, Terms, Conditions, Definitions and Exclusions contained or otherwise expressed in this Policy.",
+          "clause_id": "i. Room and Boarding expenses as per the",
+          "clause_title": "i. Room and Boarding expenses as per the li",
+          "page_number": 20,
+          "excerpt": "[Bajaj - complete] > [Scope of cover: The Company hereby agrees to indemnify You in respect of Reasonable and Customary expenses in an admissible claim, for any or all of the follo...",
+          "bbox": null,
+          "relevance_score": null
+        },
+        {
+          "policy_id": "BAJAJ_COMPLETE_2025.1",
+          "insurer": "Bajaj",
+          "plan_name": "complete",
+          "section_name": "Scope of cover: The Company hereby agrees to indemnify You in respect of Reasonable and Customary expenses in an admissible claim, for any or all of the following covers as opted, subject to the Sum Insured (\u201cSI\u201d), Limits, Deductibles, Co- payment, Terms, Conditions, Definitions and Exclusions contained or otherwise expressed in this Policy.",
+          "clause_id": "2. Pre-Hospitalisation Medical Expense",
+          "clause_title": "2. Pre-Hospitalisation Medical Expense",
+          "page_number": 12,
+          "excerpt": "[Bajaj - complete] > [Scope of cover: The Company hereby agrees to indemnify You in respect of Reasonable and Customary expenses in an admissible claim, for any or all of the follo...",
+          "bbox": null,
+          "relevance_score": null
+        }
+      ]
+    },
+    "cached_at": "2026-10-13T19:49:14.536661"
+  }
+}

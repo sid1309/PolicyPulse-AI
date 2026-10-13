@@ -154,10 +154,19 @@ def get_policy_pdf(policy_id: str):
     all_meta = _load_metadata()
     if policy_id not in all_meta:
         raise HTTPException(status_code=404, detail="Policy not found.")
-    file_path = all_meta[policy_id]["file_path"]
-    if not Path(file_path).exists():
-        raise HTTPException(status_code=404, detail="PDF file not found on disk.")
-    return FileResponse(file_path, media_type="application/pdf")
+    raw_path = all_meta[policy_id].get("file_path", "")
+    p = Path(raw_path)
+    if not p.is_absolute():
+        p = settings.BASE_DIR / "data" / raw_path
+    if not p.exists():
+        candidate = settings.POLICIES_DIR / Path(raw_path).name
+        if not candidate.exists():
+            candidate = settings.POLICIES_DIR / f"{policy_id}.pdf"
+        if candidate.exists():
+            p = candidate
+        else:
+            raise HTTPException(status_code=404, detail="PDF file not found on disk.")
+    return FileResponse(str(p), media_type="application/pdf")
 
 @router.get("/{policy_id}/summary", response_model=PolicySummaryResponse)
 def get_policy_summary(policy_id: str):

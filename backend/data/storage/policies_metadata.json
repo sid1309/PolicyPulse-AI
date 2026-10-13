@@ -1,0 +1,24 @@
+{
+  "HDFC_ERGO_OPTIMA_SECURE_2024.1": {
+    "policy_id": "HDFC_ERGO_OPTIMA_SECURE_2024.1",
+    "filename": "hdfc.pdf",
+    "insurer": "HDFC ERGO",
+    "plan_name": "Optima Secure",
+    "version": "2024.1",
+    "total_pages": 31,
+    "chunk_count": 325,
+    "file_path": "policies/HDFC_ERGO_OPTIMA_SECURE_2024.1.pdf",
+    "created_at": "2026-10-11T15:09:23.967896"
+  },
+  "BAJAJ_COMPLETE_2025.1": {
+    "policy_id": "BAJAJ_COMPLETE_2025.1",
+    "filename": "bajaj health policy.pdf",
+    "insurer": "Bajaj",
+    "plan_name": "Health Guard / Complete",
+    "version": "2025.1",
+    "total_pages": 58,
+    "chunk_count": 339,
+    "file_path": "policies/BAJAJ_COMPLETE_2025.1.pdf",
+    "created_at": "2026-10-13T19:49:07.032120"
+  }
+}

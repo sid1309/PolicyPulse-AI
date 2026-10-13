@@ -50,19 +50,13 @@ yarn-error.log*
 .agents/
 design-system/
 
-# 5. Policy PDF Documents (Users upload their own policies)
-backend/data/policies/*.pdf
+# 5. Policy PDF Documents & Storage (Pre-indexed for lightweight deployment)
 backend/data/policies_backup/
-*.pdf
-
-# 6. Database, Storage, Vector Index & Cache Files
-backend/data/storage/qdrant/
-backend/data/storage/bm25/
-*.pkl
-backend/data/storage/comparisons_cache.json
-backend/data/storage/policy_summaries_cache.json
-backend/data/storage/policies_metadata.json
-backend/data/eval_20_benchmark_results.json
+!backend/data/policies/*.pdf
+!backend/data/storage/
+!backend/data/storage/**
+backend/data/storage/qdrant/.lock
+*.lock
 
 # 8. Operating System & Editor Files
 .DS_Store

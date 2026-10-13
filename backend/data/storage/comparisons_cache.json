@@ -1,0 +1,218 @@
+{
+  "BAJAJ_COMPLETE_2025.1__vs__HDFC_ERGO_OPTIMA_SECURE_2024.1": {
+    "fingerprints": {
+      "HDFC_ERGO_OPTIMA_SECURE_2024.1": {
+        "filename": "hdfc.pdf",
+        "created_at": "2026-10-11T15:09:23.967896",
+        "chunk_count": 325
+      },
+      "BAJAJ_COMPLETE_2025.1": {
+        "filename": "bajaj health policy.pdf",
+        "created_at": "2026-10-13T19:49:07.032120",
+        "chunk_count": 339
+      }
+    },
+    "comparison_response": {
+      "policy_ids": [
+        "HDFC_ERGO_OPTIMA_SECURE_2024.1",
+        "BAJAJ_COMPLETE_2025.1"
+      ],
+      "matrix": [
+        {
+          "feature_category": "Room Rent Eligibility & Capping",
+          "policies": {
+            "HDFC_ERGO_OPTIMA_SECURE_2024.1": {
+              "insurer": "HDFC ERGO",
+              "plan_name": "Optima Secure",
+              "summary": "Limit: 1% of Sum Insured / Day (ICU: 2% / Day)",
+              "clause_title": "1. Room Rent, Boarding, Nursing Expenses al",
+              "page_number": 25,
+              "excerpt": "1. Room Rent, Boarding, Nursing Expenses all-inclusive as provided by the Hospital / Nursing Home up to 1% of the sum insured  per day. 2.1ntensive Care Unit (ICU) charges/ Intensive Cardiac Care Unit (ICCU) charges all-...",
+              "score": 0.99
+            },
+            "BAJAJ_COMPLETE_2025.1": {
+              "insurer": "Bajaj",
+              "plan_name": "complete",
+              "summary": "i. Room and Boarding expenses as Single Pri",
+              "clause_title": "i. Room and Boarding expenses as Single Pri",
+              "page_number": 12,
+              "excerpt": "i. Room and Boarding expenses as Single Private A/c room or as specified on the Policy Schedule.\n\nii. If admitted in ICU, the Company will pay up to ICU expenses at actuals.\n\niii. Nursing Expenses as provided by the Hosp...",
+              "score": 0.99
+            }
+          },
+          "recommendation": "Compare exact sub-limits and room categories."
+        },
+        {
+          "feature_category": "ICU Charges & Sub-limits",
+          "policies": {
+            "HDFC_ERGO_OPTIMA_SECURE_2024.1": {
+              "insurer": "HDFC ERGO",
+              "plan_name": "Optima Secure",
+              "summary": "Clause v)",
+              "clause_title": "Clause v)",
+              "page_number": 5,
+              "excerpt": "\n1. it needs ongoing or long-term monitoring through consultations, examinations, check- ups, and /or tests 2. it needs ongoing or long-term control or relief of symptoms 3. it requires rehabilitation for the patient or ...",
+              "score": 0.99
+            },
+            "BAJAJ_COMPLETE_2025.1": {
+              "insurer": "Bajaj",
+              "plan_name": "complete",
+              "summary": "i. Room and Boarding expenses as per the li",
+              "clause_title": "i. Room and Boarding expenses as per the li",
+              "page_number": 20,
+              "excerpt": "i. Room and Boarding expenses as per the limit/category specified on the Policy Schedule.\n\nii. If admitted in ICU, the Company will pay up to ICU expenses at actuals.\n\niii. Nursing Expenses as provided by the Hospital Su...",
+              "score": 0.99
+            }
+          },
+          "recommendation": "Compare exact sub-limits and room categories."
+        },
+        {
+          "feature_category": "Pre-Existing Diseases (PED) Waiting Period",
+          "policies": {
+            "HDFC_ERGO_OPTIMA_SECURE_2024.1": {
+              "insurer": "HDFC ERGO",
+              "plan_name": "Optima Secure",
+              "summary": "Pre-Existing Diseases (Code- Excl01)",
+              "clause_title": "Pre-Existing Diseases (Code- Excl01)",
+              "page_number": 11,
+              "excerpt": "1. Pre-Existing Diseases (Code- Excl01)...",
+              "score": 0.99
+            },
+            "BAJAJ_COMPLETE_2025.1": {
+              "insurer": "Bajaj",
+              "plan_name": "complete",
+              "summary": "Pre-Existing Diseases (Code- Excl01)",
+              "clause_title": "Pre-Existing Diseases (Code- Excl01)",
+              "page_number": 27,
+              "excerpt": "excluded until the expiry of 36 months/specified number of months of continuous coverage after the date of inception of the first My Family Complete Policy and the Policy Schedule with Us. The PED waiting period as opted...",
+              "score": 0.99
+            }
+          },
+          "recommendation": "Compare exact sub-limits and room categories."
+        },
+        {
+          "feature_category": "Specific Illness Waiting Period (Cataract, Hernia)",
+          "policies": {
+            "HDFC_ERGO_OPTIMA_SECURE_2024.1": {
+              "insurer": "HDFC ERGO",
+              "plan_name": "Optima Secure",
+              "summary": "24 Months Waiting Period",
+              "clause_title": "4.7 Modern Treatment: (c))",
+              "page_number": 12,
+              "excerpt": "c) The within referred waiting period is made applicable to the enhanced sum insured in the event of granting higher sum insured subsequently. 3. Specified disease/procedure waiting period- Code- Excl02 1. Expenses relat...",
+              "score": 0.99
+            },
+            "BAJAJ_COMPLETE_2025.1": {
+              "insurer": "Bajaj",
+              "plan_name": "complete",
+              "summary": "Specified Disease/Procedure Waiting Period (Code- Excl02)",
+              "clause_title": "Specified Disease/Procedure Waiting Period (Code- Excl02)",
+              "page_number": 27,
+              "excerpt": "norms on Portability stipulated by IRDAI, then waiting period for the same would be reduced to the extent of prior coverage.\n\ne) List of specific diseases/ procedures/ surgeries/ treatments is as below: List of specific ...",
+              "score": 0.99
+            }
+          },
+          "recommendation": "Policy with lower waiting period duration is preferable."
+        },
+        {
+          "feature_category": "Pre & Post Hospitalization Medical Expenses",
+          "policies": {
+            "HDFC_ERGO_OPTIMA_SECURE_2024.1": {
+              "insurer": "HDFC ERGO",
+              "plan_name": "Optima Secure",
+              "summary": "4. 4 Post-Hospitalization Medical Expenses",
+              "clause_title": "4. 4 Post-Hospitalization Medical Expenses",
+              "page_number": 10,
+              "excerpt": "4.4 Post-Hospitalization Medical Expenses : The Company shall indemnify Post Hospitalization Medical Expenses incurred, related to an admissible Hospitalization requiring Inpatient Care, for a fixed period of 60 days fro...",
+              "score": 0.99
+            },
+            "BAJAJ_COMPLETE_2025.1": {
+              "insurer": "Bajaj",
+              "plan_name": "complete",
+              "summary": "2. Pre-Hospitalisation Medical Expense",
+              "clause_title": "2. Pre-Hospitalisation Medical Expense",
+              "page_number": 12,
+              "excerpt": "c) The Insured has an option to modify the room category to Actuals.\n\n2. Pre-Hospitalisation Medical Expense We will indemnify You for Reasonable and Customary Medical Expenses incurred by the Insured, for up to 60 days ...",
+              "score": 0.99
+            }
+          },
+          "recommendation": "Compare exact sub-limits and room categories."
+        },
+        {
+          "feature_category": "Co-payment & Zone Deductibles",
+          "policies": {
+            "HDFC_ERGO_OPTIMA_SECURE_2024.1": {
+              "insurer": "HDFC ERGO",
+              "plan_name": "Optima Secure",
+              "summary": "Def 10. Co-payment means a cost sharing requirem",
+              "clause_title": "Def 10. Co-payment means a cost sharing requirem",
+              "page_number": 3,
+              "excerpt": "Def 10. Co-payment means a cost sharing requirement under a health insurance policy that provides that the policyholder/insured will bear a specified percentage of the admissible claims amount. A co-payment does not redu...",
+              "score": 0.99
+            },
+            "BAJAJ_COMPLETE_2025.1": {
+              "insurer": "Bajaj",
+              "plan_name": "complete",
+              "summary": "i. Room and Boarding expenses as per the li",
+              "clause_title": "i. Room and Boarding expenses as per the li",
+              "page_number": 20,
+              "excerpt": "i. Room and Boarding expenses as per the limit/category specified on the Policy Schedule.\n\nii. If admitted in ICU, the Company will pay up to ICU expenses at actuals.\n\niii. Nursing Expenses as provided by the Hospital Su...",
+              "score": 0.99
+            }
+          },
+          "recommendation": "Compare exact sub-limits and room categories."
+        },
+        {
+          "feature_category": "Modern Treatments & Robotic Surgery",
+          "policies": {
+            "HDFC_ERGO_OPTIMA_SECURE_2024.1": {
+              "insurer": "HDFC ERGO",
+              "plan_name": "Optima Secure",
+              "summary": "4. 7 Modern Treatment",
+              "clause_title": "4. 7 Modern Treatment",
+              "page_number": 11,
+              "excerpt": "4.7 Modern Treatment: The following procedures will be covered (wherever medically indicated) either as In patient or as part of Day Care Treatment in a Hospital up to 50% of Sum Insured, specified in the Policy Schedule...",
+              "score": 0.99
+            },
+            "BAJAJ_COMPLETE_2025.1": {
+              "insurer": "Bajaj",
+              "plan_name": "complete",
+              "summary": "4. Modern Treatment Methods and Advancement",
+              "clause_title": "4. Modern Treatment Methods and Advancement",
+              "page_number": 13,
+              "excerpt": "4. Modern Treatment Methods and Advancement in Technologies We will indemnify You against all the eligible Reasonable and Customary Medical Expenses incurred if Insured Person / Insured Pet undergoes procedures as listed...",
+              "score": 0.99
+            }
+          },
+          "recommendation": "Compare exact sub-limits and room categories."
+        },
+        {
+          "feature_category": "Day Care Treatments",
+          "policies": {
+            "HDFC_ERGO_OPTIMA_SECURE_2024.1": {
+              "insurer": "HDFC ERGO",
+              "plan_name": "Optima Secure",
+              "summary": "Claim Timelines & Documents Grid (Page 23)",
+              "clause_title": "Claim Timelines & Documents Grid (Page 23)",
+              "page_number": 23,
+              "excerpt": "\n| S.No | Type of Claim | Prescribed Time limit |\n| --- | --- | --- |\n| 1. | Reimbursement of hospitalization, day care and prehospitalization expenses | Within thirty days of date of discharge from hospital |\n| 2. | Rei...",
+              "score": 0.99
+            },
+            "BAJAJ_COMPLETE_2025.1": {
+              "insurer": "Bajaj",
+              "plan_name": "complete",
+              "summary": "Medical Benefits & Sub-limits Grid (Page 3)",
+              "clause_title": "Medical Benefits & Sub-limits Grid (Page 3)",
+              "page_number": 3,
+              "excerpt": "\n| 13. | Dental Treatment means a treatment related to teeth or structures supporting teeth including examinations, fillings (where appropriate), crowns, extractions and surgery. |\n| --- | --- |\n| 14. | Disclosure of inf...",
+              "score": 0.99
+            }
+          },
+          "recommendation": "Compare exact sub-limits and room categories."
+        }
+      ],
+      "executive_verdict": "Evaluated 2 policies across 8 key dimensions. Policies with 'No Room Rent Capping' and lower Waiting Periods (24 vs 48 months) offer significantly lower out-of-pocket exposure during inpatient hospitalization claims."
+    },
+    "cached_at": "2026-10-13T19:54:34.431326"
+  }
+}
